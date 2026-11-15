@@ -29,7 +29,7 @@ Backend serial memakai Win32 API langsung (tanpa QtSerialPort), jadi tidak ada d
 
 Unduh dari halaman [Releases](../../releases):
 
-- **`SerialMon-v1.0.0-portable.exe`** - satu file, klik dua kali. Pertama dijalankan mengekstrak diri ke `%LOCALAPPDATA%SerialMon` (beberapa detik), setelah itu langsung terbuka.
+- **`SerialMon-v1.0.0-portable.exe`** - satu file, klik dua kali. Pertama dijalankan mengekstrak diri ke `%LOCALAPPDATA%\SerialMon` (beberapa detik), setelah itu langsung terbuka.
 - `SerialMon-v1.0.0-win64.zip` - versi folder: ekstrak, jalankan `SerialMonitor.exe`.
 
 Keduanya tanpa instalasi. Exe satu file butuh Windows 10/11 (memakai `tar.exe` bawaan); sebagian antivirus bisa curiga pada exe yang mengekstrak diri, pakai zip jika terjadi.
