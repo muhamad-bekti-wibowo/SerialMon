@@ -17,5 +17,6 @@ for %%D in (vcruntime140.dll vcruntime140_1.dll msvcp140.dll msvcp140_1.dll msvc
 copy /y LICENSE dist\SerialMon\ >nul
 copy /y README.md dist\SerialMon\ >nul
 powershell -NoProfile -Command "Compress-Archive -Path dist\SerialMon -DestinationPath dist\SerialMon-v%VER%-win64.zip -Force" || exit /b 1
+call "%~dp0portable\build_portable.bat" %VER% || exit /b 1
 echo.
-echo Selesai: %~dp0dist\SerialMon-v%VER%-win64.zip
+echo Selesai: %~dp0dist\SerialMon-v%VER%-win64.zip dan SerialMon-v%VER%-portable.exe
