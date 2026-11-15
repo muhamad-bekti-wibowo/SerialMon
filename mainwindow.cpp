@@ -102,6 +102,7 @@ void MainWindow::startDemo()
 {
     // Data tiruan tanpa hardware: jalankan dengan  SerialMonitor.exe --demo
     plotBtn->setChecked(true);
+    if (filterEdit->text().isEmpty()) { filterEdit->setText("adc="); applyFilterAll(); }
     auto* t = new QTimer(this);
     auto* n = new int(0);
     connect(t, &QTimer::timeout, this, [this, n] {
@@ -117,8 +118,8 @@ void MainWindow::startDemo()
 
 void MainWindow::buildUi()
 {
-    setWindowTitle("Serial Monitor");
-    resize(1100, 760);
+    setWindowTitle(QStringLiteral("Serial Monitor ") + QStringLiteral(APP_VERSION));
+    resize(1280, 760);
     auto* root = new QWidget;
     setCentralWidget(root);
     auto* rv = new QVBoxLayout(root);

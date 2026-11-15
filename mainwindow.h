@@ -21,6 +21,7 @@ class MainWindow : public QMainWindow {
 public:
     MainWindow();
     void startDemo();
+    void applyTheme(bool dark);
 
 protected:
     void closeEvent(QCloseEvent* e) override;
@@ -40,7 +41,6 @@ private:
     void beginLine(class QTextCursor& c);
     void endLine(class QTextCursor& c);
     void scrollIfNeeded();
-    void applyTheme(bool dark);
     void updateStateUi();
     void applyFilterAll();
     bool matchFilter(const QString& s, int* ms, int* me) const;

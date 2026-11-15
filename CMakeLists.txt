@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(SerialMonitor LANGUAGES CXX)
+project(SerialMonitor VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -29,3 +29,4 @@ qt_add_resources(SerialMonitor "assets"
         assets/fonts/JetBrainsMono.ttf
 )
 target_link_libraries(SerialMonitor PRIVATE Qt6::Widgets setupapi)
+target_compile_definitions(SerialMonitor PRIVATE APP_VERSION="${PROJECT_VERSION}")
